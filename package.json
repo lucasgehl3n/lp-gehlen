@@ -22,6 +22,9 @@
     "nuxt": "3.0.0"
   },
   "dependencies": {
-    "flowbite": "^2.2.0"
+    "flowbite": "^2.2.0",
+    "flowbite-vue": "^0.1.2",
+    "vue-easy-lightbox": "^1.17.0",
+    "vue3-carousel": "^0.3.1"
   }
 }
