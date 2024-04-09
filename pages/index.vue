@@ -20,9 +20,11 @@ import Projects from './Projects.vue';
 import Footer from './Footer.vue';
 import { onMounted } from 'vue';
 import { initFlowbite } from 'flowbite'
+import { inject } from '@vercel/analytics';
 
 onMounted(() => {
   initFlowbite();
+  inject();
   document.documentElement.classList.add('dark');
 });
 

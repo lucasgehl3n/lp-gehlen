@@ -1,5 +1,5 @@
 <template>
-  <nav class=" border-gray-200 sm:bg-transparent sm:fixed w-full z-10" id="navbar-nav">
+  <nav class=" border-gray-200 bg-transparent fixed w-full z-10" id="navbar-nav">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
       <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
         <img src="~/assets/images/logo-lucas.svg" height="100" width="50" class="ml-auto mr-auto sm:w-50">
