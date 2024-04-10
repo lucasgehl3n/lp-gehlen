@@ -73,7 +73,7 @@
                 </div>
             </div>
             <!-- Illustration -->
-            <img class="hidden mx-auto mb-4 sm:flex rounded-md" src="~/assets/images/bicycle.webp"
+            <img class="hidden mx-auto mb-4 sm:flex rounded-md max-w-2xl max-h-fit" src="~/assets/images/bicycle.webp"
                 alt="table professor illustration">
         </div>
     </section>

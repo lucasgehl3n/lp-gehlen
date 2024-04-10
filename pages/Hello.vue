@@ -1,5 +1,7 @@
 <template>
-    <section class="bg-[url('~/assets/images/banner.webp')] bg-no-repeat bg-cover bg-center bg-gray-700 bg-blend-multiply" id="home">
+    <section
+        class="bg-[url('~/assets/images/banner.webp')] bg-no-repeat bg-cover bg-center bg-gray-700 bg-blend-multiply"
+        id="home">
         <div class="relative px-4 mx-auto max-w-screen-xl text-white lg:py-16 xl:px-0 z-1 py-15p">
             <div class="mb-6 w-full lg:mb-0">
                 <div class="flex w-full">
@@ -13,7 +15,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="w-30">
+                    <div class="w-0 md:w-30">
                         <img src="~/assets/images/logo-lucas.svg" class="h-80 w-100">
                     </div>
                 </div>
@@ -30,39 +32,11 @@
 
 .typewriter {
     overflow: hidden;
-    /* Ensures the content is not revealed until the animation */
-    border-right: .10em solid white;
-    /* The typwriter cursor */
     white-space: nowrap;
-    /* Keeps the content on a single line */
-    /* Gives that scrolling effect as the typing happens */
-    /* Adjust as needed */
-    animation:
-        typing 3.5s steps(30, end),
-        blink-caret .75s step-end infinite;
+    width: 100%
 }
 
-/* The typing effect */
-@keyframes typing {
-    from {
-        width: 0
-    }
-
-    to {
-        width: 100%
-    }
-}
-
-/* The typewriter cursor effect */
-@keyframes blink-caret {
-
-    from,
-    to {
-        border-color: transparent
-    }
-
-    50% {
-        border-color: white;
-    }
+.pt-100 {
+    padding-top: 100px;
 }
 </style>

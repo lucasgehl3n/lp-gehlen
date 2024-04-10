@@ -49,10 +49,12 @@
 import { onMounted } from 'vue';
 let navbar;
 let navbarUL;
+let home;
 
 onMounted(() => {
   navbar = document.getElementById('navbar-nav');
   navbarUL = document.getElementById('navbar-ul');
+  home = document.getElementById('home');
 
   window.onscroll = function () {
     scrollHandler();
@@ -66,7 +68,7 @@ onMounted(() => {
 const scrollHandler = () => {
   if (window.innerWidth < 768) {
     addBackgroundNavbar();
-    navbar.classList.remove('fixed');
+    home.classList.add('pt-100');
     return;
   }
   if (window.scrollY > window.innerHeight - 250) {

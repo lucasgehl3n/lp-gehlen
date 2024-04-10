@@ -1,6 +1,6 @@
 <template>
   <Header></Header>
-  <div class="w-full h-full bg-gray-900">
+  <div class="max-w-100 h-full bg-gray-900">
     <Hello></Hello>
     <About></About>
     <WhoIAm></WhoIAm>
@@ -21,7 +21,6 @@ import Footer from './Footer.vue';
 import { onMounted } from 'vue';
 import { initFlowbite } from 'flowbite'
 import { inject } from '@vercel/analytics';
-
 onMounted(() => {
   initFlowbite();
   inject();
