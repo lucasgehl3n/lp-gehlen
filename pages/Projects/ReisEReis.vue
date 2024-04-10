@@ -5,7 +5,7 @@
                 <Carousel id="gallery" :items-to-show="1" v-model="currentSlide" :wrap-around="true">
                     <Slide v-for="slide in pictures" :key="slide">
                         <div class="carousel__item">
-                            <img :src="slide.src" class="h-full max-h-96 w-auto" v-on:click="showGalleryImage" />
+                            <img :src="slide.src" class="h-full max-h-96 w-auto" v-on:click="showGalleryImage" loading="lazy"/>
                         </div>
                     </Slide>
                     <template #addons>
@@ -15,9 +15,9 @@
                 </Carousel>
             </div>
 
-            <vue-easy-lightbox :visible="showGallery" :imgs="pictures" :index="currentSlide" :loop="true"
+            <lazy-vue-easy-lightbox :visible="showGallery" :imgs="pictures" :index="currentSlide" :loop="true"
                 :moveDisabled="true" @hide="closeGallery" :rotateDisabled="true">
-            </vue-easy-lightbox>
+            </lazy-vue-easy-lightbox>
 
             <div class="mt-4 md:mt-0">
                 <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-white">
@@ -44,13 +44,13 @@
 
 <script setup>
 import { Carousel, Navigation, Pagination, Slide } from 'vue3-carousel'
-import VueEasyLightbox from "vue-easy-lightbox/dist/external-css/vue-easy-lightbox.esm.min.js";
+import LazyVueEasyLightbox from "vue-easy-lightbox/dist/external-css/vue-easy-lightbox.esm.min.js";
 
 const currentSlide = ref(0);
 const pictures = computed(() => {
     return [
-        { src: '/assets/img/reisereis-2.png' },
-        { src: '/assets/img/reisereis-1.png' },
+        { src: '/assets/img/reisereis-2.webp' },
+        { src: '/assets/img/reisereis-1.webp' },
     ]
 })
 const showGallery = ref(false);

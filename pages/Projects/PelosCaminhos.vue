@@ -6,7 +6,7 @@
                 <Carousel id="gallery" :items-to-show="1" v-model="currentSlide" :wrap-around="true">
                     <Slide v-for="slide in pictures" :key="slide">
                         <div class="carousel__item">
-                            <img :src="slide.src" class="h-full max-h-96 w-auto" v-on:click="showGalleryImage" />
+                            <img :src="slide.src" class="h-full max-h-96 w-auto" v-on:click="showGalleryImage" loading="lazy"/>
                         </div>
                     </Slide>
                     <template #addons>
@@ -15,13 +15,13 @@
                     </template>
                 </Carousel>
 
-                <vue-easy-lightbox :visible="showGallery" :imgs="pictures" :index="currentSlide" :loop="true"
+                <lazy-vue-easy-lightbox :visible="showGallery" :imgs="pictures" :index="currentSlide" :loop="true"
                     :moveDisabled="true" @hide="closeGallery" :rotateDisabled="true">
-                </vue-easy-lightbox>
+                </lazy-vue-easy-lightbox>
 
-                <vue-easy-lightbox :visible="showGalleryArchitecture" :imgs="architecture" :index="0"
+                <lazy-vue-easy-lightbox :visible="showGalleryArchitecture" :imgs="architecture" :index="0"
                     :moveDisabled="true" @hide="closeGalleryArchitecture" :rotateDisabled="true">
-                </vue-easy-lightbox>
+                </lazy-vue-easy-lightbox>
             </div>
             <div class="mt-4 md:mt-0">
                 <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-white">
@@ -74,22 +74,20 @@
 
 <script setup>
 import { Carousel, Navigation, Pagination, Slide } from 'vue3-carousel'
-import VueEasyLightbox from "vue-easy-lightbox/dist/external-css/vue-easy-lightbox.esm.min.js";
-import "vue-easy-lightbox/dist/external-css/vue-easy-lightbox.css";
-import "vue3-carousel/dist/carousel.css";
+import LazyVueEasyLightbox from "vue-easy-lightbox/dist/external-css/vue-easy-lightbox.esm.min.js";
 
 const currentSlide = ref(0);
 const pictures = computed(() => {
     return [
-        { src: '/assets/img/peloscaminhos-1.png' },
-        { src: '/assets/img/peloscaminhos-2.png' },
-        { src: '/assets/img/peloscaminhos-3.png' },
+        { src: '/assets/img/peloscaminhos-1.webp' },
+        { src: '/assets/img/peloscaminhos-2.webp' },
+        { src: '/assets/img/peloscaminhos-3.webp' },
     ]
 })
 
 const architecture = computed(() => {
     return [
-        { src: '/assets/img/arquitetura.jpeg' }
+        { src: '/assets/img/arquitetura.webp' }
     ]
 })
 
@@ -126,15 +124,21 @@ const showGithub = () => {
     )
 };
 
-const sendMailer = () => {
-    sendmail({
-        from: '05.mari.melo@gmail.com',
-        to: 'contato.lucasgehlen@gmail.com',
-        subject: 'test sendmail',
-        html: 'Mail of test sendmail ',
-    }, function (err, reply) {
-        console.log(err && err.stack);
-        console.dir(reply);
-    });
+onMounted(() => {
+   asyncLoadCSS();
+});
+
+const asyncLoadCSS = async () => {
+    // Importando e adicionando o CSS do vue-easy-lightbox de forma assíncrona
+    const lightboxCSS = await import("vue-easy-lightbox/dist/external-css/vue-easy-lightbox.css");
+    const styleLightbox = document.createElement('style');
+    styleLightbox.textContent = lightboxCSS.default;
+    document.head.appendChild(styleLightbox);
+
+    // Importando e adicionando o CSS do vue3-carousel de forma assíncrona
+    const carouselCSS = await import("vue3-carousel/dist/carousel.css");
+    const styleCarousel = document.createElement('style');
+    styleCarousel.textContent = carouselCSS.default;
+    document.head.appendChild(styleCarousel);
 };
 </script>

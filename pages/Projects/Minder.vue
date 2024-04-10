@@ -5,7 +5,7 @@
                 <Carousel id="gallery" :items-to-show="1" v-model="currentSlide" :wrap-around="true">
                     <Slide v-for="slide in pictures" :key="slide">
                         <div class="carousel__item">
-                            <img :src="slide.src" class="h-full max-h-96 w-auto" v-on:click="showGalleryImage" />
+                            <img :src="slide.src" class="h-full max-h-96 w-auto" v-on:click="showGalleryImage" loading="lazy"/>
                         </div>
                     </Slide>
                     <template #addons>
@@ -46,30 +46,30 @@
 
             
 
-            <vue-easy-lightbox :visible="showGallery" :imgs="pictures" :index="currentSlide" :loop="true"
+            <lazy-vue-easy-lightbox :visible="showGallery" :imgs="pictures" :index="currentSlide" :loop="true"
                 :moveDisabled="true" @hide="closeGallery" :rotateDisabled="true">
-            </vue-easy-lightbox>
+            </lazy-vue-easy-lightbox>
         </div>
     </section>
 </template>
 
 <script setup>
 import { Carousel, Navigation, Pagination, Slide } from 'vue3-carousel'
-import VueEasyLightbox from "vue-easy-lightbox/dist/external-css/vue-easy-lightbox.esm.min.js";
+import LazyVueEasyLightbox from "vue-easy-lightbox/dist/external-css/vue-easy-lightbox.esm.min.js";
 
 const currentSlide = ref(0);
 const pictures = computed(() => {
     return [
-        { src: '/assets/img/minder-1.png' },
-        { src: '/assets/img/minder-2.png' },
-        { src: '/assets/img/minder-3.png' },
-        { src: '/assets/img/minder-4.png' },
-        { src: '/assets/img/minder-5.png' },
+        { src: '/assets/img/minder-1.webp' },
+        { src: '/assets/img/minder-2.webp' },
+        { src: '/assets/img/minder-3.webp' },
+        { src: '/assets/img/minder-4.webp' },
+        { src: '/assets/img/minder-5.webp' },
     ]
 })
 const showGallery = ref(false);
 
-const showGalleryImage = (index) => {
+const showGalleryImage = () => {
     showGallery.value = true;
 };
 

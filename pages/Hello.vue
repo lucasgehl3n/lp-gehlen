@@ -1,5 +1,5 @@
 <template>
-    <section class="bg-[url('~/assets/images/banner.jpg')] bg-no-repeat bg-cover bg-center bg-gray-700 bg-blend-multiply" id="home">
+    <section class="bg-[url('~/assets/images/banner.webp')] bg-no-repeat bg-cover bg-center bg-gray-700 bg-blend-multiply" id="home">
         <div class="relative px-4 mx-auto max-w-screen-xl text-white lg:py-16 xl:px-0 z-1 py-15p">
             <div class="mb-6 w-full lg:mb-0">
                 <div class="flex w-full">
