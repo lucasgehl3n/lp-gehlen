@@ -1,6 +1,6 @@
 <template>
     <section class="bg-gray-900" id="projects">
-        <div class="gap-8 items-center py-8 px-4 mx-auto lg:py-16 lg:px-6">
+        <div class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
             <h2 class="mb-10 text-4xl tracking-tight font-extrabold text-white">
                 Projetos
             </h2>
