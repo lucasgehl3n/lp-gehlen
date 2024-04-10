@@ -3,7 +3,7 @@
         <div class="mx-auto max-w-screen-xl text-center">
             <div class="sm:items-center sm:justify-between sm:flex">
                 <a href="#" class="flex items-center mb-4 text-2xl font-semibold lg:mb-0 text-white">
-                    <img src="~/assets/images/logo-lucas.svg" height="100" width="50" class="ml-auto mr-auto sm:w-50">
+                    <img src="~/assets/images/logo-lucas.svg" height="100" width="50" class="ml-auto mr-auto sm:w-50" alt="Logotipo Lucas">
                 </a>
                 <span class="block text-sm text-gray-500 dark:text-gray-400">© 2024 <a href="https://flowbite.com"
                         class="hover:underline">Lucas Gehlen</a>. Todos os direitos reservados.</span>

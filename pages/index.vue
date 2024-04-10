@@ -25,6 +25,13 @@ onMounted(async () => {
   document.documentElement.classList.add('dark');
   const { inject } = await import('@vercel/analytics');
   inject();
+  definePageMeta({
+    title: 'Lucas Gehlen',
+  });
+
+  useHead({
+    title: 'Lucas Gehlen'
+  });
 });
 
 </script>

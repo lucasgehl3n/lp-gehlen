@@ -5,7 +5,7 @@
                 <Carousel id="gallery" :items-to-show="1" v-model="currentSlide" :wrap-around="true">
                     <Slide v-for="slide in pictures" :key="slide">
                         <div class="carousel__item">
-                            <img :src="slide.src" class="h-full max-h-96 w-auto" v-on:click="showGalleryImage" loading="lazy"/>
+                            <img :src="slide.src" class="h-full max-h-96 w-auto" v-on:click="showGalleryImage" loading="lazy" alt="Imagens do projeto Minder"/>
                         </div>
                     </Slide>
                     <template #addons>

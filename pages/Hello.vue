@@ -16,7 +16,7 @@
                         </div>
                     </div>
                     <div class="w-0 md:w-30">
-                        <img src="~/assets/images/logo-lucas.svg" class="h-80 w-100">
+                        <img src="~/assets/images/logo-lucas.svg" class="h-80 w-100" alt="Logotipo Lucas">
                     </div>
                 </div>
             </div>
