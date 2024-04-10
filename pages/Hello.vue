@@ -1,6 +1,6 @@
 <template>
     <section
-        class="bg-[url('~/assets/images/banner.webp')] bg-no-repeat bg-cover bg-center bg-gray-700 bg-blend-multiply"
+        class="bg-image-hello bg-no-repeat bg-cover bg-center bg-gray-700 bg-blend-multiply"
         id="home">
         <div class="relative px-4 mx-auto max-w-screen-xl text-white lg:py-16 xl:px-0 z-1 py-15p">
             <div class="mb-6 w-full lg:mb-0">
@@ -38,5 +38,9 @@
 
 .pt-100 {
     padding-top: 100px;
+}
+
+.bg-image-hello {
+    background-image: url('~/assets/images/banner.webp');
 }
 </style>
