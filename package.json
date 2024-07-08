@@ -23,9 +23,13 @@
   },
   "dependencies": {
     "@vercel/analytics": "^1.2.2",
+    "axios": "^1.7.2",
+    "dotenv": "^16.4.5",
     "flowbite": "^2.2.0",
-    "flowbite-vue": "^0.1.2",
+    "flowbite-vue": "^0.1.5",
+    "maska": "^2.1.10",
     "vue-easy-lightbox": "^1.17.0",
+    "vue-the-mask": "^0.11.1",
     "vue3-carousel": "^0.3.1"
   }
 }

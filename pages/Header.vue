@@ -1,11 +1,11 @@
 <template>
   <nav class=" border-gray-200 bg-transparent fixed w-full z-10" id="navbar-nav">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-      <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
+      <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
         <img src="~/assets/images/logo-lucas.svg" height="100" width="50" class="ml-auto mr-auto sm:w-50" alt="Logotipo Lucas">
       </a>
       <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-        <button data-collapse-toggle="navbar-cta" type="button"
+        <button data-collapse-toggle="navbar-cta" type="button" id="navbar-toggle"
           class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
           aria-controls="navbar-cta" aria-expanded="false">
           <span class="sr-only">Abrir menu</span>
@@ -40,6 +40,10 @@
             <a href="#projects"
               class="block py-2 px-3 md:p-0 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-400 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Projetos</a>
           </li>
+          <li>
+            <a href="#contactme"
+              class="block py-2 px-3 md:p-0 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-400 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contato</a>
+          </li>
         </ul>
       </div>
     </div>
@@ -59,6 +63,13 @@ onMounted(() => {
   window.onscroll = function () {
     scrollHandler();
   };
+
+  const liSelector = document.querySelectorAll('#navbar-ul li a');
+  liSelector.forEach((li) => {
+    li.addEventListener('click', () => {
+      document.getElementById('navbar-toggle').click();
+    });
+  });
 
   scrollHandler();
 });

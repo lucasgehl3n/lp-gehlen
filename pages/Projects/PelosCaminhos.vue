@@ -35,7 +35,7 @@
                 <p class="mb-6 font-light md:text-lg text-gray-400">
                     Ele tem o objetivo de ser uma plataforma que mescla três perfis: o usuário adotante, o administrador
                     de
-                    instituições e os voluntários.
+                    instituições e os voluntários. A ideia é que o usuário adotante possa encontrar animais para adoção, enquanto instituições podem fazer o gerenciamento de todas as informações internas do animal e disponibilizá-los para adoção.
                 </p>
                 <p class="mb-6 font-light md:text-lg text-gray-400">
                     O software conta com um recurso para reconhecimento de animais a partir da identificação de raças.

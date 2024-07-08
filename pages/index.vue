@@ -6,6 +6,7 @@
     <WhoIAm></WhoIAm>
     <Experience></Experience>
     <Projects></Projects>
+    <ContactMe></ContactMe>
     <Footer></Footer>
   </div>
 </template>
@@ -17,6 +18,7 @@ import About from './About.vue';
 import WhoIAm from './WhoIAm.vue';
 import Experience from './Experience.vue';
 import Projects from './Projects.vue';
+import ContactMe from './ContactMe.vue';
 import Footer from './Footer.vue';
 import { onMounted } from 'vue';
 import { initFlowbite } from 'flowbite'
@@ -30,7 +32,10 @@ onMounted(async () => {
   });
 
   useHead({
-    title: 'Lucas Gehlen'
+    title: 'Lucas Gehlen',
+    htmlAttrs: {
+      lang: 'pt-br',
+    }
   });
 });
 
