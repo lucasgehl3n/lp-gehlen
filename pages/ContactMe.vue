@@ -18,11 +18,10 @@
             </div>
             <div v-else>
                 <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">
-                    Contate-me
+                    Vamos Conversar?
                 </h2>
                 <p class="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">
-                    Se você tiver alguma dúvida ou quiser entrar em contato para negócios, preencha o formulário abaixo.
-                </p>
+                    Tem alguma dúvida ou quer potencializar a presença digital do seu negócio? Preencha o formulário abaixo e eu entrarei em contato o mais rápido possível.                </p>
                 <form action="#" class="space-y-8">
                     <div>
                         <FwbInput type="email" id="email" v-model="mail" :label="'Email'" placeholder="email@gmail.com"
@@ -52,7 +51,7 @@
                     </div>
 
                     <a target="_blank" @click="send"
-                        class="mobile-text-center-button inline-flex items-center text-white bg-blue-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center focus:ring-primary-900">
+                        class="mobile-text-center-button inline-flex items-center text-white bg-blue-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center focus:ring-primary-900 cursor-pointer">
                         Enviar
                     </a>
                 </form>

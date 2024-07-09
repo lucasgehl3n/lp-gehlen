@@ -27,9 +27,7 @@
                                 requisitos
                             </p>
                             <p class="font-light text-gray-400">
-                                A partir de um briefing, identifico as necessidades do cliente e as transformo em
-                                requisitos
-                                de software.
+                                A partir de um briefing detalhado, identifico e compreendo as necessidades do cliente, transformando-as em requisitos de software claros e precisos.
                             </p>
                         </div>
                     </div>

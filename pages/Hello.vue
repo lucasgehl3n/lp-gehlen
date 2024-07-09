@@ -11,7 +11,7 @@
                                 class="typewriter mb-4 pr-4 text-4xl font-extrabold tracking-tight leading-tight text-white w-auto md:text-5xl lg:text-6xl">
                                 Olá, eu sou o Lucas.</h1>
                             <p class="mb-6 font-light text-gray-300 lg:mb-8 md:text-lg lg:text-xl">
-                                Estou aqui para impulsionar sua presença online.
+                                Vamos transformar juntos sua presença online em um diferencial competitivo.
                             </p>
                         </div>
                     </div>
