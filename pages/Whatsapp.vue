@@ -71,11 +71,4 @@
       transform: scale(0.95);
     }
   }
-  
-  @media screen and (max-width: 1200px) {
-    .balaoTooltip {
-      bottom: 5px;
-      height: 30px;
-    }
-  }
 </style>
