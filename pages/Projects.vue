@@ -2,16 +2,16 @@
     <section class="bg-gray-900" id="projects">
         <div class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
             <h2 class="mb-10 text-4xl tracking-tight font-extrabold text-white">
-                Projetos
+                {{ $t('projectsTitle') }}
             </h2>
             <fwb-tabs v-model="currentTab" variant="underline" class="p-5">
-                <fwb-tab name="PelosCaminhos" title="Pelos Caminhos">
+                <fwb-tab name="PelosCaminhos" :title="$t('tabPelosCaminhos')">
                     <PelosCaminhos />
                 </fwb-tab>
-                <fwb-tab name="ReisEReis" title="Reis & Reis - Adovacia Penal">
+                <fwb-tab name="ReisEReis" :title="$t('tabReisEReis')">
                     <ReisEReis v-if="currentTab === 'ReisEReis'"></ReisEReis>
                 </fwb-tab>
-                <fwb-tab name="Minder" title="Minder">
+                <fwb-tab name="Minder" :title="$t('tabMinder')">
                     <Minder v-if="currentTab === 'Minder'"></Minder>
                 </fwb-tab>
             </fwb-tabs>
@@ -21,9 +21,10 @@
 
 <script setup>
 import PelosCaminhos from './Projects/PelosCaminhos.vue';
-import { FwbTab, FwbTabs } from 'flowbite-vue'
+import { FwbTab, FwbTabs } from 'flowbite-vue';
 import ReisEReis from './Projects/ReisEReis.vue';
 import Minder from './Projects/Minder.vue';
+import { ref } from 'vue';
 
 const currentTab = ref("PelosCaminhos");
 </script>

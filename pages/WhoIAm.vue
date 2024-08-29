@@ -6,18 +6,21 @@
                 <img class="mt-4 max-w-full max-h-fit lg:mt-10 rounded-lg" src="~/assets/images/lucas2.webp" alt="Foto 2 de Lucas Gehlen" loading="lazy">
             </div>
             <div class="font-light sm:text-lg text-gray-400">
-                <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-white">Quem sou</h2>
+                <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-white">{{ t('whoAmI') }}</h2>
                 <p class="mb-4">
-                    Sou um desenvolvedor de software com vasta experiência em soluções web. Sou um admirador do trabalho em equipe e dos ganhos que ele pode proporcionar.
-                    Atualmente trabalho como desenvolvedor front-end na Compass UOL, atuando no projeto da Vivo "Meu Vivo Empresas" (web e mobile). Também realizo trabalhos como freelancer. 
+                    {{ t('developerIntro') }}
                 </p>
                 <p class="mb-4">
-                    Sou formado em Ciência da Computação pela Universidade de Caxias do Sul (UCS), e antes disso realizei um curso técnico em informática integrado ao ensino médio, 
-                    com enfoque em programação e engenharia de software, no Instituto Federal do Rio Grande do Sul (IFRS). A formação técnica me auxiliou a iniciar minha carreira muito cedo, com apenas 15 anos de idade.
+                    {{ t('education') }}
                 </p>
-
-                <p>Busco ser um tanto desapegado com tecnologias. Penso que a tecnologia ideal é aquela que mais se adequa ao projeto. Minhas raízes estão no C# e no VueJS, mas já atuei com diversas outras.</p>
+                <p>{{ t('techApproach') }}</p>
             </div>
         </div>
     </section>
 </template>
+
+<script setup>
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
+</script>

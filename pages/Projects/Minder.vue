@@ -3,9 +3,9 @@
         <div class="gap-4 items-center py-4 px-4 mx-auto xl:gap-16 md:grid md:grid-cols-2 sm:py-4 lg:px-6">
             <div class="w-100 h-100">
                 <Carousel id="gallery" :items-to-show="1" v-model="currentSlide" :wrap-around="true">
-                    <Slide v-for="slide in pictures" :key="slide">
+                    <Slide v-for="slide in pictures" :key="slide.src">
                         <div class="carousel__item">
-                            <img :src="slide.src" class="h-full max-h-96 w-auto" v-on:click="showGalleryImage" loading="lazy" alt="Imagens do projeto Minder"/>
+                            <img :src="slide.src" class="h-full max-h-96 w-auto" v-on:click="showGalleryImage" loading="lazy" :alt="$t('minderImageAlt')"/>
                         </div>
                     </Slide>
                     <template #addons>
@@ -16,25 +16,21 @@
             </div>
             <div class="mt-4 md:mt-0">
                 <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-white">
-                    Minder
+                    {{ $t('minderTitle') }}
                 </h2>
                 <p class="mb-6 font-light md:text-lg text-gray-400">
-                    Minder se trata de um software que disponibiliza mecanismos de interação para o profissional da área da saúde mental,
-                    que possibilitam um controle de vínculos entre sintomas, patologias e questionamentos.
-                    A partir disso, realiza-se um cálculo capaz de criar um pré-diagnóstico para o paciente. 
+                    {{ $t('minderDescription1') }}
                 </p>
                 <p class="mb-6 font-light md:text-lg text-gray-400">
-                    Um teste que avalia sintomas de depressão e ansiedade já está disponível, a nível de exemplificação.
-                    Os questionamentos foram construídos juntamente a um profissional vinculado a área da psicologia (Louise Dall’Agnol).
+                    {{ $t('minderDescription2') }}
                 </p>
                 <p class="mb-6 font-light md:text-lg text-gray-400">
-                    "Minder" foi apresentado como Trabalho de Conclusão de Curso do "Curso de Informática Integrado ao
-                    Ensino Médio" na instituição "IFRS - Campus Farroupilha".
+                    {{ $t('minderDescription3') }}
                 </p>
 
-                <a href="https://advocaciapenal.com" target="_blank"
+                <a :href="$t('minderArticleLink')" target="_blank"
                     class="mobile-text-center-button inline-flex items-center text-white bg-blue-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:focus:ring-primary-900">
-                    Ler artigo
+                    {{ $t('minderReadArticle') }}
                     <svg class="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd"
@@ -44,8 +40,6 @@
                 </a>
             </div>
 
-            
-
             <lazy-vue-easy-lightbox :visible="showGallery" :imgs="pictures" :index="currentSlide" :loop="true"
                 :moveDisabled="true" @hide="closeGallery" :rotateDisabled="true">
             </lazy-vue-easy-lightbox>
@@ -54,19 +48,18 @@
 </template>
 
 <script setup>
-import { Carousel, Navigation, Pagination, Slide } from 'vue3-carousel'
+import { ref, computed } from 'vue';
+import { Carousel, Navigation, Pagination, Slide } from 'vue3-carousel';
 import LazyVueEasyLightbox from "vue-easy-lightbox/dist/external-css/vue-easy-lightbox.esm.min.js";
 
 const currentSlide = ref(0);
-const pictures = computed(() => {
-    return [
-        { src: '/assets/img/minder-1.webp' },
-        { src: '/assets/img/minder-2.webp' },
-        { src: '/assets/img/minder-3.webp' },
-        { src: '/assets/img/minder-4.webp' },
-        { src: '/assets/img/minder-5.webp' },
-    ]
-})
+const pictures = computed(() => [
+    { src: '/assets/img/minder-1.webp' },
+    { src: '/assets/img/minder-2.webp' },
+    { src: '/assets/img/minder-3.webp' },
+    { src: '/assets/img/minder-4.webp' },
+    { src: '/assets/img/minder-5.webp' },
+]);
 const showGallery = ref(false);
 
 const showGalleryImage = () => {

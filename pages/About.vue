@@ -2,15 +2,15 @@
     <section class="bg-gray-900" id="about">
         <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
             <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl lg:text-6xl text-white">
-                Softwares precisam de vida</h1>
+                {{ t('softwareLife') }}
+            </h1>
             <p class="text-lg font-normal lg:text-xl sm:px-16 xl:px-48 text-gray-400">
-                Onde quer que você esteja, a experiência do usuário sempre é a prioridade.
-                Te ajudo a garantir experiências intuitivas, dinâmicas e responsivas.
+                {{ t('userExperience') }}
             </p>
         </div>
     </section>
     <section class="bg-gray-900">
-        <div class="gap-8 items-center px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 xl:gap-16 lg:px-6 ">
+        <div class="gap-8 items-center px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 xl:gap-16 lg:px-6">
             <div class="text-gray-500 sm:text-lg">
                 <div class="grid gap-6 lg:grid-cols-1 border-gray-700 sm:grid-cols-2">
                     <div class="flex">
@@ -23,11 +23,11 @@
                             </svg>
                         </div>
                         <div>
-                            <p class="mb-1 text-2xl font-extrabold tracking-tight text-white">Análise de
-                                requisitos
+                            <p class="mb-1 text-2xl font-extrabold tracking-tight text-white">
+                                {{ t('requirementAnalysis') }}
                             </p>
                             <p class="font-light text-gray-400">
-                                A partir de um briefing detalhado, identifico e compreendo as necessidades do cliente, transformando-as em requisitos de software claros e precisos.
+                                {{ t('requirementAnalysisDescription') }}
                             </p>
                         </div>
                     </div>
@@ -40,11 +40,11 @@
                             </svg>
                         </div>
                         <div>
-                            <p class="mb-1 text-2xl font-extrabold tracking-tight text-white">Concepção
+                            <p class="mb-1 text-2xl font-extrabold tracking-tight text-white">
+                                {{ t('design') }}
                             </p>
                             <p class="font-light text-gray-400">
-                                Antes do desenvolvimento, crio protótipos navegáveis para validar a experiência do
-                                usuário.
+                                {{ t('designDescription') }}
                             </p>
                         </div>
                     </div>
@@ -58,13 +58,11 @@
                             </svg>
                         </div>
                         <div>
-                            <p class="mb-1 text-2xl font-extrabold tracking-tight text-white">Construção
+                            <p class="mb-1 text-2xl font-extrabold tracking-tight text-white">
+                                {{ t('development') }}
                             </p>
-                            <p class="font-ligh text-gray-400">
-                                Desenvolvo o software com as tecnologias mais adequadas para o projeto, ou de acordo com
-                                a
-                                preferência do cliente,
-                                oferecendo feedbacks constantes.
+                            <p class="font-light text-gray-400">
+                                {{ t('developmentDescription') }}
                             </p>
                         </div>
                     </div>
@@ -76,3 +74,9 @@
         </div>
     </section>
 </template>
+
+<script setup>
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
+</script>

@@ -9,9 +9,10 @@
                         <div class="w-min">
                             <h1
                                 class="typewriter mb-4 pr-4 text-4xl font-extrabold tracking-tight leading-tight text-white w-auto md:text-5xl lg:text-6xl">
-                                Olá, eu sou o Lucas.</h1>
+                                {{ t('greeting') }}
+                            </h1>
                             <p class="mb-6 font-light text-gray-300 lg:mb-8 md:text-lg lg:text-xl">
-                                Vamos transformar juntos sua presença online em um diferencial competitivo.
+                                {{ t('description') }}
                             </p>
                         </div>
                     </div>
@@ -23,6 +24,12 @@
         </div>
     </section>
 </template>
+
+<script setup>
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
+</script>
 
 <style scoped>
 .py-15p {
