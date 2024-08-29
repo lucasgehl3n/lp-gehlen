@@ -9,6 +9,7 @@ export default defineNuxtConfig({
     plugins: [
         { src: '~/plugins/mask.js', ssr: false },
         '~/plugins/gtag.js',
+        '~/plugins/i18n.js',
     ],
     runtimeConfig: {
         public: {
