@@ -1,5 +1,5 @@
 import { defineNuxtPlugin } from '#app'
-
+import gtag from '~~/utils/gtag';
 export default defineNuxtPlugin(nuxtApp => {
   if (process.client) {
     // Add the Google Analytics script to the page
@@ -11,9 +11,6 @@ export default defineNuxtPlugin(nuxtApp => {
     // Initialize the Google Analytics configuration
     script.onload = () => {
       window.dataLayer = window.dataLayer || []
-      function gtag() {
-        window.dataLayer.push(arguments)
-      }
       gtag('js', new Date())
       gtag('config', nuxtApp.$config.googleAnalyticsId)
     }

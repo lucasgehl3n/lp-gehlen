@@ -15,6 +15,7 @@ export default defineNuxtConfig({
         public: {
             baseURLBackend: process.env.BASE_URL_BACKEND || 'http://localhost:3000',
             googleAnalyticsId: process.env.GOOGLE_ANALYTICS_ID,
+            gaConversionWPP: process.env.GA_CONVERSION_WHATSAPP,
         },
     },
     darkMode: 'class',
